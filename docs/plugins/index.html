@@ -19,7 +19,7 @@
 <meta property="og:url" content="https://jekyllrb.com/docs/plugins/">
 <meta property="og:site_name" content="Jekyll • Simple, blog-aware, static sites">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2016-08-26T17:05:44-07:00">
+<meta property="article:published_time" content="2016-09-07T15:52:58-07:00">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@jekyllrb">
 <meta name="google-site-verification" content="onQcXpAvtHBrUI5LlroHNE_FP0b2qvFyPq7VZw36iEY">
@@ -28,7 +28,7 @@
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "headline": "Plugins",
-    "datePublished": "2016-08-26T17:05:44-07:00",
+    "datePublished": "2016-09-07T15:52:58-07:00",
     "description": "Jekyll has a plugin system with hooks that allow you to create custom generatedcontent specific to your site. You can run custom code for your site withouthaving to modify the Jekyll source itself.",
     "logo": "https://jekyllrb.comimg/logo-2x.png",
     "url": "https://jekyllrb.com/docs/plugins/"
@@ -799,11 +799,13 @@ hook like this:</p>
 </div>
 
 <p>Jekyll provides hooks for <code>:site</code>, <code>:pages</code>,
-<code>:posts</code>, and <code>:documents</code>. In all cases, Jekyll calls your
-hooks with the container object as the first callback parameter. But in the
-case of <code>:pre_render</code>, your hook will also receive a payload hash as
-a second parameter which allows you full control over the variables that are
-available while rendering.</p>
+<code>:posts</code>, and <code>:documents</code>. In all cases, Jekyll calls
+your hooks with the container object as the first callback parameter. However,
+all <code class="highlighter-rouge">:pre_render</code> hooks and the<code class="highlighter-rouge">:site, :post_render</code> hook will also provide a
+payload hash as a second parameter. In the case of <code class="highlighter-rouge">:pre_render</code>, the payload
+gives you full control over the variables that are available while rendering.
+In the case of <code class="highlighter-rouge">:site, :post_render</code>, the payload contains final values after
+rendering all the site (useful for sitemaps, feeds, etc).</p>
 
 <p>The complete list of available hooks is below:</p>
 

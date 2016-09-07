@@ -19,7 +19,7 @@
 <meta property="og:url" content="https://jekyllrb.com/docs/troubleshooting/">
 <meta property="og:site_name" content="Jekyll • Simple, blog-aware, static sites">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2016-08-26T17:05:44-07:00">
+<meta property="article:published_time" content="2016-09-07T15:52:58-07:00">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@jekyllrb">
 <meta name="google-site-verification" content="onQcXpAvtHBrUI5LlroHNE_FP0b2qvFyPq7VZw36iEY">
@@ -28,7 +28,7 @@
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "headline": "Troubleshooting",
-    "datePublished": "2016-08-26T17:05:44-07:00",
+    "datePublished": "2016-09-07T15:52:58-07:00",
     "description": "If you ever run into problems installing or using Jekyll, here are a few tipsthat might be of help. If the problem you’re experiencing isn’t covered below,please check out our other help resources as well.",
     "logo": "https://jekyllrb.comimg/logo-2x.png",
     "url": "https://jekyllrb.com/docs/troubleshooting/"
@@ -292,6 +292,7 @@ that might be of help. If the problem you’re experiencing isn’t covered belo
   <li><a href="#base-url-problems">Base-URL Problems</a></li>
   <li><a href="#configuration-problems">Configuration problems</a></li>
   <li><a href="#markup-problems">Markup Problems</a></li>
+  <li><a href="#production-problems">Production Problems</a></li>
 </ul>
 
 <h2 id="installation-problems">Installation Problems</h2>
@@ -501,6 +502,13 @@ v1.1.0, Jekyll also passes these excerpts through Liquid, which can cause
 strange errors where references don’t exist or a tag hasn’t been closed. If you
 run into these errors, try setting <code class="highlighter-rouge">excerpt_separator: ""</code> in your
 <code class="highlighter-rouge">_config.yml</code>, or set it to some nonsense string.</p>
+
+<h2 id="production-problems">Production Problems</h2>
+
+<p>If you run into an issue that a static file can’t be found in your
+production environment during build since v3.2.0 you should set your
+<a href="../configuration/#specifying-a-jekyll-environment-at-build-time">environment to <code class="highlighter-rouge">production</code></a>.
+The issue is caused by trying to copy a non-existing symlink.</p>
 
 <div class="note">
   <h5>Please report issues you encounter!</h5>
