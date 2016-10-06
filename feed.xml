@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://jekyllrb.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jekyllrb.com/" rel="alternate" type="text/html" /><updated>2016-09-13T13:29:12-07:00</updated><id>https://jekyllrb.com/</id><title type="html">Jekyll • Simple, blog-aware, static sites</title><subtitle>Transform your plain text into static websites and blogs</subtitle><entry><title type="html">Jekyll Admin Initial Release</title><link href="https://jekyllrb.com/news/2016/08/24/jekyll-admin-initial-release/" rel="alternate" type="text/html" title="Jekyll Admin Initial Release" /><published>2016-08-24T23:50:00-07:00</published><updated>2016-08-24T23:50:00-07:00</updated><id>https://jekyllrb.com/news/2016/08/24/jekyll-admin-initial-release</id><content type="html" xml:base="https://jekyllrb.com/news/2016/08/24/jekyll-admin-initial-release/">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/news/2016/06/03/update-on-jekyll-s-google-summer-of-code-projects/&quot;&gt;Jekyll’s Google Summer of Code Project&lt;/a&gt; has concluded. After three months of hard (but fun) work with my mentors @benbalter, @jldec, and @parkr, I’m proud to announce &lt;a href=&quot;https://github.com/jekyll/jekyll-admin&quot;&gt;Jekyll Admin&lt;/a&gt;’s &lt;a href=&quot;https://github.com/jekyll/jekyll-admin/releases/tag/v0.1.0&quot;&gt;initial release&lt;/a&gt;. Jekyll admin is a Jekyll plugin that provides users with a traditional CMS-style graphical interface to author content and administer Jekyll sites. You can start to use it right away by following &lt;a href=&quot;https://github.com/jekyll/jekyll-admin#installation&quot;&gt;these instructions&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://jekyllrb.com/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="https://jekyllrb.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://jekyllrb.com/" rel="alternate" type="text/html" /><updated>2016-10-06T11:13:46-07:00</updated><id>https://jekyllrb.com/</id><title type="html">Jekyll • Simple, blog-aware, static sites</title><subtitle>Transform your plain text into static websites and blogs</subtitle><entry><title type="html">Jekyll 3.3 is here with better theme support, new URL filters, and tons more</title><link href="https://jekyllrb.com/news/2016/10/06/jekyll-3-3-is-here/" rel="alternate" type="text/html" title="Jekyll 3.3 is here with better theme support, new URL filters, and tons more" /><published>2016-10-06T11:10:38-07:00</published><updated>2016-10-06T11:10:38-07:00</updated><id>https://jekyllrb.com/news/2016/10/06/jekyll-3-3-is-here</id><content type="html" xml:base="https://jekyllrb.com/news/2016/10/06/jekyll-3-3-is-here/">&lt;p&gt;There are tons of great new quality-of-life features you can use in 3.3.
+Three key things you might want to try:&lt;/p&gt;
+
+&lt;h3 id=&quot;themes-can-now-ship-static--dynamic-assets-in-an-assets-directory&quot;&gt;1. Themes can now ship static &amp;amp; dynamic assets in an &lt;code class=&quot;highlighter-rouge&quot;&gt;/assets&lt;/code&gt; directory&lt;/h3&gt;
+
+&lt;p&gt;In Jekyll 3.2, we shipped the ability to use a theme that was packaged as a
+&lt;a href=&quot;http://guides.rubygems.org/&quot;&gt;gem&lt;/a&gt;. 3.2 included support for includes,
+layouts, and sass partials. In 3.3, we’re adding assets to that list.&lt;/p&gt;
+
+&lt;p&gt;In an effort to make theme management a bit easier, any files you put into
+&lt;code class=&quot;highlighter-rouge&quot;&gt;/assets&lt;/code&gt; in your theme will be read in as though they were part of the
+user’s site. This means you can ship SCSS and CoffeeScript, images and
+webfonts, and so on – anything you’d consider a part of the
+&lt;em&gt;presentation&lt;/em&gt;. Same rules apply here as in a Jekyll site: if it has YAML
+front matter, it will be converted and rendered. No YAML front matter, and
+it will simply be copied over like a static asset.&lt;/p&gt;
+
+&lt;p&gt;Note that if a user has a file of the same path, the theme content will not
+be included in the site, i.e. a user’s &lt;code class=&quot;highlighter-rouge&quot;&gt;/assets/main.scss&lt;/code&gt; will be read and
+processed if present instead of a theme’s &lt;code class=&quot;highlighter-rouge&quot;&gt;/assets/main.scss&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;See our &lt;a href=&quot;/docs/themes/#assets&quot;&gt;documentation on the subject&lt;/a&gt;
+for more info.&lt;/p&gt;
+
+&lt;h3 id=&quot;relativeurl-and-absoluteurl-filters&quot;&gt;2. &lt;code class=&quot;highlighter-rouge&quot;&gt;relative_url&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;absolute_url&lt;/code&gt; filters&lt;/h3&gt;
+
+&lt;p&gt;Want a clean way to prepend the &lt;code class=&quot;highlighter-rouge&quot;&gt;baseurl&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt; in your config? These
+new filters have you covered. When working locally, if you set your
+&lt;code class=&quot;highlighter-rouge&quot;&gt;baseurl&lt;/code&gt; to match your deployment environment, say &lt;code class=&quot;highlighter-rouge&quot;&gt;baseurl: &quot;/myproject&quot;&lt;/code&gt;,
+then &lt;code class=&quot;highlighter-rouge&quot;&gt;relative_url&lt;/code&gt; will ensure that this baseurl is prepended to anything
+you pass it:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/docs/assets/&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;relative_url&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt; =&amp;gt; /myproject/docs/assets&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;By default, &lt;code class=&quot;highlighter-rouge&quot;&gt;baseurl&lt;/code&gt; is set to &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt; and therefore yields (never set to
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;/&quot;&lt;/code&gt;):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/docs/assets/&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;relative_url&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt; =&amp;gt; /docs/assets&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;A result of &lt;code class=&quot;highlighter-rouge&quot;&gt;relative_url&lt;/code&gt; will safely always produce a URL which is
+relative to the domain root. A similar principle applies to &lt;code class=&quot;highlighter-rouge&quot;&gt;absolute_url&lt;/code&gt;.
+It prepends your &lt;code class=&quot;highlighter-rouge&quot;&gt;baseurl&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt; values, making absolute URL’s all the
+easier to make:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/docs/assets/&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;absolute_url&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt; =&amp;gt; http://jekyllrb.com/myproject/docs/assets&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;siteurl-is-set-by-the-development-server&quot;&gt;3. &lt;code class=&quot;highlighter-rouge&quot;&gt;site.url&lt;/code&gt; is set by the development server&lt;/h3&gt;
+
+&lt;p&gt;When you run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; locally, it starts a web server, usually at
+&lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000&lt;/code&gt;, that you use to preview your site during
+development. If you are using the new &lt;code class=&quot;highlighter-rouge&quot;&gt;absolute_url&lt;/code&gt; filter, or using
+&lt;code class=&quot;highlighter-rouge&quot;&gt;site.url&lt;/code&gt; anywhere, you have probably had to create a development config
+which resets the &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt; value to point to &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;No longer! When you run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, Jekyll will build your site with
+the value of the &lt;code class=&quot;highlighter-rouge&quot;&gt;host&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;port&lt;/code&gt;, and SSL-related options. This defaults to
+&lt;code class=&quot;highlighter-rouge&quot;&gt;url: http://localhost:4000&lt;/code&gt;. When you are developing locally, &lt;code class=&quot;highlighter-rouge&quot;&gt;site.url&lt;/code&gt;
+will yield &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:4000&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This happens by default when running Jekyll locally. It will not be set if
+you set &lt;code class=&quot;highlighter-rouge&quot;&gt;JEKYLL_ENV=production&lt;/code&gt; and run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;. If &lt;code class=&quot;highlighter-rouge&quot;&gt;JEKYLL_ENV&lt;/code&gt; is
+any value except &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt; (its default value), Jekyll will not
+overwrite the value of &lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt; in your config. And again, this only applies
+to serving, not to building.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-lot-more&quot;&gt;A &lt;em&gt;lot&lt;/em&gt; more!&lt;/h2&gt;
+
+&lt;p&gt;There are dozens of bug fixes and minor improvements to make your Jekyll
+experience better than ever. With every Jekyll release, we strive to bring
+greater stability and reliability to your everyday development workflow.&lt;/p&gt;
+
+&lt;p&gt;As always, thanks to our many contributors who contributed countless hours
+of their free time to making this release happen:&lt;/p&gt;
+
+&lt;p&gt;Anatoliy Yastreb, Anthony Gaudino, Antonio, Ashwin Maroli, Ben Balter,
+Charles Horn, Chris Finazzo, Daniel Chapman, David Zhang, Eduardo
+Bouças, Edward Thomson, Eloy Espinaco, Florian Thomas, Frank Taillandier,
+Gerardo, Heng Kwokfu, Heng, K. (Stephen), Jeff Kolesky, Jonathan Thornton,
+Jordon Bedwell, Jussi Kinnula, Júnior Messias, Kyle O’Brien, Manmeet Gill,
+Mark H. Wilkinson, Marko Locher, Mertcan GÖKGÖZ, Michal Švácha, Mike
+Kasberg, Nadjib Amar, Nicolas Hoizey, Nicolas Porcel, Parker Moore, Pat
+Hawks, Patrick Marsceill, Stephen Checkoway, Stuart Kent, XhmikosR, Zlatan
+Vasović, mertkahyaoglu, shingo-nakanishi, and vohedge.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/docs/history/#v3-3-0&quot;&gt;Full release notes&lt;/a&gt; are available
+for your perusal. If you notice any issues, please don’t hesitate to file a
+bug report.&lt;/p&gt;
+
+&lt;p&gt;Happy Jekylling!&lt;/p&gt;</content><author><name>parkr</name></author><summary type="html">There are tons of great new quality-of-life features you can use in 3.3.
+Three key things you might want to try:</summary></entry><entry><title type="html">Jekyll Admin Initial Release</title><link href="https://jekyllrb.com/news/2016/08/24/jekyll-admin-initial-release/" rel="alternate" type="text/html" title="Jekyll Admin Initial Release" /><published>2016-08-24T23:50:00-07:00</published><updated>2016-08-24T23:50:00-07:00</updated><id>https://jekyllrb.com/news/2016/08/24/jekyll-admin-initial-release</id><content type="html" xml:base="https://jekyllrb.com/news/2016/08/24/jekyll-admin-initial-release/">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/news/2016/06/03/update-on-jekyll-s-google-summer-of-code-projects/&quot;&gt;Jekyll’s Google Summer of Code Project&lt;/a&gt; has concluded. After three months of hard (but fun) work with my mentors @benbalter, @jldec, and @parkr, I’m proud to announce &lt;a href=&quot;https://github.com/jekyll/jekyll-admin&quot;&gt;Jekyll Admin&lt;/a&gt;’s &lt;a href=&quot;https://github.com/jekyll/jekyll-admin/releases/tag/v0.1.0&quot;&gt;initial release&lt;/a&gt;. Jekyll admin is a Jekyll plugin that provides users with a traditional CMS-style graphical interface to author content and administer Jekyll sites. You can start to use it right away by following &lt;a href=&quot;https://github.com/jekyll/jekyll-admin#installation&quot;&gt;these instructions&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;As a Google Summer of Code student, I feel very lucky to be part of a project that the community has been wanting for such a long time. The three-month Google Summer of Code period was a great journey. It was a lot of fun developing the project and seeing how it could help the community, and going forward, we are really excited to see where the project goes with the help of the amazing Jekyll community.&lt;/p&gt;
 
@@ -216,18 +305,4 @@ to use. Sorry for the regression!</summary></entry><entry><title type="html">Jek
 
 &lt;p&gt;Both of these issues have been resolved. For more information, check out &lt;a href=&quot;/docs/history/#v3-1-3&quot;&gt;the full history&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Happy Jekylling!&lt;/p&gt;</content><author><name>parkr</name></author><summary type="html">v3.1.3 is a patch release which fixes the follow two issues:</summary></entry><entry><title type="html">Jekyll 3.0.4 Released</title><link href="https://jekyllrb.com/news/2016/04/19/jekyll-3-0-4-released/" rel="alternate" type="text/html" title="Jekyll 3.0.4 Released" /><published>2016-04-19T10:26:12-07:00</published><updated>2016-04-19T10:26:12-07:00</updated><id>https://jekyllrb.com/news/2016/04/19/jekyll-3-0-4-released</id><content type="html" xml:base="https://jekyllrb.com/news/2016/04/19/jekyll-3-0-4-released/">&lt;p&gt;v3.0.4 is a patch release which fixes the follow two issues:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Front matter defaults may not have worked for collection documents and posts due to a problem where they were looked up by their URL rather than their path relative to the site source&lt;/li&gt;
-  &lt;li&gt;Configuration for the posts permalink might be borked when a user specified a value for &lt;code class=&quot;highlighter-rouge&quot;&gt;collections.posts.permalink&lt;/code&gt; directly. This forced the use of &lt;code class=&quot;highlighter-rouge&quot;&gt;permalink&lt;/code&gt; at the top level, which also affected pages. To configure a permalink &lt;em&gt;just for posts&lt;/em&gt;, you can do so with:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;s&quot;&gt;collections&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;s&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/blog/:year/:title/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Both of these issues have been resolved. For more information, check out &lt;a href=&quot;/docs/history/#v3-0-4&quot;&gt;the full history&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Happy Jekylling!&lt;/p&gt;</content><author><name>parkr</name></author><summary type="html">v3.0.4 is a patch release which fixes the follow two issues:</summary></entry></feed>
+&lt;p&gt;Happy Jekylling!&lt;/p&gt;</content><author><name>parkr</name></author><summary type="html">v3.1.3 is a patch release which fixes the follow two issues:</summary></entry></feed>

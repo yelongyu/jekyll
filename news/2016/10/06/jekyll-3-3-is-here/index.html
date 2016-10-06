@@ -11,28 +11,28 @@
   <link rel="stylesheet" href="/css/screen.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <!-- Begin Jekyll SEO tag v2.0.0 -->
-<title>Jekyll 1.0.4 Released - Jekyll • Simple, blog-aware, static sites</title>
-<meta property="og:title" content="Jekyll 1.0.4 Released">
-<meta name="description" content="Version 1.0.4 fixes a minor, but nonetheless important security vulnerability affecting several third-party Jekyll plugins. If your Jekyll site does not use plugins, you may, but are not required to upgrade at this time.">
-<meta property="og:description" content="Version 1.0.4 fixes a minor, but nonetheless important security vulnerability affecting several third-party Jekyll plugins. If your Jekyll site does not use plugins, you may, but are not required to upgrade at this time.">
-<link rel="canonical" href="https://jekyllrb.com/news/2013/07/25/jekyll-1-0-4-released/">
-<meta property="og:url" content="https://jekyllrb.com/news/2013/07/25/jekyll-1-0-4-released/">
+<title>Jekyll 3.3 is here with better theme support, new URL filters, and tons more - Jekyll • Simple, blog-aware, static sites</title>
+<meta property="og:title" content="Jekyll 3.3 is here with better theme support, new URL filters, and tons more">
+<meta name="description" content="There are tons of great new quality-of-life features you can use in 3.3.Three key things you might want to try:">
+<meta property="og:description" content="There are tons of great new quality-of-life features you can use in 3.3.Three key things you might want to try:">
+<link rel="canonical" href="https://jekyllrb.com/news/2016/10/06/jekyll-3-3-is-here/">
+<meta property="og:url" content="https://jekyllrb.com/news/2016/10/06/jekyll-3-3-is-here/">
 <meta property="og:site_name" content="Jekyll • Simple, blog-aware, static sites">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2013-07-25T00:08:38-07:00">
+<meta property="article:published_time" content="2016-10-06T11:10:38-07:00">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@jekyllrb">
-<meta name="twitter:creator" content="@mattr-">
+<meta name="twitter:creator" content="@parkr">
 <meta name="google-site-verification" content="onQcXpAvtHBrUI5LlroHNE_FP0b2qvFyPq7VZw36iEY">
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "Jekyll 1.0.4 Released",
-    "datePublished": "2013-07-25T00:08:38-07:00",
-    "description": "Version 1.0.4 fixes a minor, but nonetheless important security vulnerability affecting several third-party Jekyll plugins. If your Jekyll site does not use plugins, you may, but are not required to upgrade at this time.",
+    "headline": "Jekyll 3.3 is here with better theme support, new URL filters, and tons more",
+    "datePublished": "2016-10-06T11:10:38-07:00",
+    "description": "There are tons of great new quality-of-life features you can use in 3.3.Three key things you might want to try:",
     "logo": "https://jekyllrb.com/img/logo-2x.png",
-    "url": "https://jekyllrb.com/news/2013/07/25/jekyll-1-0-4-released/"
+    "url": "https://jekyllrb.com/news/2016/10/06/jekyll-3-3-is-here/"
   }
 </script>
 <!-- End Jekyll SEO tag -->
@@ -229,8 +229,8 @@
       <div class="unit four-fifths">
         <article>
   <h2>
-    Jekyll 1.0.4 Released
-    <a href="/news/2013/07/25/jekyll-1-0-4-released/" class="permalink" title="Permalink">∞</a>
+    Jekyll 3.3 is here with better theme support, new URL filters, and tons more
+    <a href="/news/2016/10/06/jekyll-3-3-is-here/" class="permalink" title="Permalink">∞</a>
   </h2>
   <span class="post-category">
     <span class="label">
@@ -239,23 +239,103 @@
   </span>
   <div class="post-meta">
     <span class="post-date">
-      25 Jul 2013
+      06 Oct 2016
     </span>
-    <a href="https://github.com/mattr-" class="post-author">
-      <img class="avatar avatar-small" src="https://avatars0.githubusercontent.com/mattr-?v=3&amp;s=24" alt="mattr-" srcset="https://avatars0.githubusercontent.com/mattr-?v=3&amp;s=24 1x, https://avatars0.githubusercontent.com/mattr-?v=3&amp;s=48 2x, https://avatars0.githubusercontent.com/mattr-?v=3&amp;s=72 3x, https://avatars0.githubusercontent.com/mattr-?v=3&amp;s=96 4x" width="24" height="24" data-proofer-ignore="true">
-      mattr-
+    <a href="https://github.com/parkr" class="post-author">
+      <img class="avatar avatar-small" src="https://avatars3.githubusercontent.com/parkr?v=3&amp;s=24" alt="parkr" srcset="https://avatars3.githubusercontent.com/parkr?v=3&amp;s=24 1x, https://avatars3.githubusercontent.com/parkr?v=3&amp;s=48 2x, https://avatars3.githubusercontent.com/parkr?v=3&amp;s=72 3x, https://avatars3.githubusercontent.com/parkr?v=3&amp;s=96 4x" width="24" height="24" data-proofer-ignore="true">
+      parkr
     </a>
   </div>
   <div class="post-content">
-    <p>Version 1.0.4 fixes a minor, but nonetheless important security vulnerability affecting several third-party Jekyll plugins. If your Jekyll site does not use plugins, you may, but are not required to upgrade at this time.</p>
+    <p>There are tons of great new quality-of-life features you can use in 3.3.
+Three key things you might want to try:</p>
 
-<p>Community and custom plugins extending the <code class="highlighter-rouge">Liquid::Drop</code> class may inadvertently disclose some system information such as directory structure or software configuration to users with access to the Liquid templating system.</p>
+<h3 id="themes-can-now-ship-static--dynamic-assets-in-an-assets-directory">1. Themes can now ship static &amp; dynamic assets in an <code class="highlighter-rouge">/assets</code> directory</h3>
 
-<p>We recommend you upgrade to Jekyll v1.0.4 immediately if you use <code class="highlighter-rouge">Liquid::Drop</code> plugins on your Jekyll site.</p>
+<p>In Jekyll 3.2, we shipped the ability to use a theme that was packaged as a
+<a href="http://guides.rubygems.org/">gem</a>. 3.2 included support for includes,
+layouts, and sass partials. In 3.3, we’re adding assets to that list.</p>
 
-<p>Many thanks for <a href="https://github.com/benbalter">Ben Balter</a> for alerting us to the problem
-and <a href="https://github.com/jekyll/jekyll/issues/1349">submitting a patch</a> so quickly.</p>
+<p>In an effort to make theme management a bit easier, any files you put into
+<code class="highlighter-rouge">/assets</code> in your theme will be read in as though they were part of the
+user’s site. This means you can ship SCSS and CoffeeScript, images and
+webfonts, and so on – anything you’d consider a part of the
+<em>presentation</em>. Same rules apply here as in a Jekyll site: if it has YAML
+front matter, it will be converted and rendered. No YAML front matter, and
+it will simply be copied over like a static asset.</p>
 
+<p>Note that if a user has a file of the same path, the theme content will not
+be included in the site, i.e. a user’s <code class="highlighter-rouge">/assets/main.scss</code> will be read and
+processed if present instead of a theme’s <code class="highlighter-rouge">/assets/main.scss</code>.</p>
+
+<p>See our <a href="/docs/themes/#assets">documentation on the subject</a>
+for more info.</p>
+
+<h3 id="relativeurl-and-absoluteurl-filters">2. <code class="highlighter-rouge">relative_url</code> and <code class="highlighter-rouge">absolute_url</code> filters</h3>
+
+<p>Want a clean way to prepend the <code class="highlighter-rouge">baseurl</code> or <code class="highlighter-rouge">url</code> in your config? These
+new filters have you covered. When working locally, if you set your
+<code class="highlighter-rouge">baseurl</code> to match your deployment environment, say <code class="highlighter-rouge">baseurl: "/myproject"</code>,
+then <code class="highlighter-rouge">relative_url</code> will ensure that this baseurl is prepended to anything
+you pass it:</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="s2">"/docs/assets/"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">relative_url</span><span class="w"> </span><span class="p">}}</span> =&gt; /myproject/docs/assets</code></pre></figure>
+
+<p>By default, <code class="highlighter-rouge">baseurl</code> is set to <code class="highlighter-rouge">""</code> and therefore yields (never set to
+<code class="highlighter-rouge">"/"</code>):</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="s2">"/docs/assets/"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">relative_url</span><span class="w"> </span><span class="p">}}</span> =&gt; /docs/assets</code></pre></figure>
+
+<p>A result of <code class="highlighter-rouge">relative_url</code> will safely always produce a URL which is
+relative to the domain root. A similar principle applies to <code class="highlighter-rouge">absolute_url</code>.
+It prepends your <code class="highlighter-rouge">baseurl</code> and <code class="highlighter-rouge">url</code> values, making absolute URL’s all the
+easier to make:</p>
+
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{{</span><span class="w"> </span><span class="s2">"/docs/assets/"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">absolute_url</span><span class="w"> </span><span class="p">}}</span> =&gt; http://jekyllrb.com/myproject/docs/assets</code></pre></figure>
+
+<h3 id="siteurl-is-set-by-the-development-server">3. <code class="highlighter-rouge">site.url</code> is set by the development server</h3>
+
+<p>When you run <code class="highlighter-rouge">jekyll serve</code> locally, it starts a web server, usually at
+<code class="highlighter-rouge">http://localhost:4000</code>, that you use to preview your site during
+development. If you are using the new <code class="highlighter-rouge">absolute_url</code> filter, or using
+<code class="highlighter-rouge">site.url</code> anywhere, you have probably had to create a development config
+which resets the <code class="highlighter-rouge">url</code> value to point to <code class="highlighter-rouge">http://localhost:4000</code>.</p>
+
+<p>No longer! When you run <code class="highlighter-rouge">jekyll serve</code>, Jekyll will build your site with
+the value of the <code class="highlighter-rouge">host</code>, <code class="highlighter-rouge">port</code>, and SSL-related options. This defaults to
+<code class="highlighter-rouge">url: http://localhost:4000</code>. When you are developing locally, <code class="highlighter-rouge">site.url</code>
+will yield <code class="highlighter-rouge">http://localhost:4000</code>.</p>
+
+<p>This happens by default when running Jekyll locally. It will not be set if
+you set <code class="highlighter-rouge">JEKYLL_ENV=production</code> and run <code class="highlighter-rouge">jekyll serve</code>. If <code class="highlighter-rouge">JEKYLL_ENV</code> is
+any value except <code class="highlighter-rouge">development</code> (its default value), Jekyll will not
+overwrite the value of <code class="highlighter-rouge">url</code> in your config. And again, this only applies
+to serving, not to building.</p>
+
+<h2 id="a-lot-more">A <em>lot</em> more!</h2>
+
+<p>There are dozens of bug fixes and minor improvements to make your Jekyll
+experience better than ever. With every Jekyll release, we strive to bring
+greater stability and reliability to your everyday development workflow.</p>
+
+<p>As always, thanks to our many contributors who contributed countless hours
+of their free time to making this release happen:</p>
+
+<p>Anatoliy Yastreb, Anthony Gaudino, Antonio, Ashwin Maroli, Ben Balter,
+Charles Horn, Chris Finazzo, Daniel Chapman, David Zhang, Eduardo
+Bouças, Edward Thomson, Eloy Espinaco, Florian Thomas, Frank Taillandier,
+Gerardo, Heng Kwokfu, Heng, K. (Stephen), Jeff Kolesky, Jonathan Thornton,
+Jordon Bedwell, Jussi Kinnula, Júnior Messias, Kyle O’Brien, Manmeet Gill,
+Mark H. Wilkinson, Marko Locher, Mertcan GÖKGÖZ, Michal Švácha, Mike
+Kasberg, Nadjib Amar, Nicolas Hoizey, Nicolas Porcel, Parker Moore, Pat
+Hawks, Patrick Marsceill, Stephen Checkoway, Stuart Kent, XhmikosR, Zlatan
+Vasović, mertkahyaoglu, shingo-nakanishi, and vohedge.</p>
+
+<p><a href="/docs/history/#v3-3-0">Full release notes</a> are available
+for your perusal. If you notice any issues, please don’t hesitate to file a
+bug report.</p>
+
+<p>Happy Jekylling!</p>
 
   </div>
 </article>
@@ -275,7 +355,7 @@ and <a href="https://github.com/jekyll/jekyll/issues/1349">submitting a patch</a
     <h4>Recent Releases</h4>
     <ul>
       
-      <li class="">
+      <li class="current">
         <a href="/news/2016/10/06/jekyll-3-3-is-here/">Version 3.3.0</a>
       </li>
       

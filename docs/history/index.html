@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="generator" content="Jekyll v3.2.1">
+  <meta name="generator" content="Jekyll v3.3.0">
   <link type="application/atom+xml" rel="alternate" href="https://jekyllrb.com/feed.xml" title="Jekyll • Simple, blog-aware, static sites">
   <link rel="alternate" type="application/atom+xml" title="Recent commits to Jekyll’s master branch" href="https://github.com/jekyll/jekyll/commits/master.atom">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic,900">
@@ -13,13 +13,13 @@
   <!-- Begin Jekyll SEO tag v2.0.0 -->
 <title>History - Jekyll • Simple, blog-aware, static sites</title>
 <meta property="og:title" content="History">
-<meta name="description" content="3.2.1 / 2016-08-02">
-<meta property="og:description" content="3.2.1 / 2016-08-02">
+<meta name="description" content="3.3.0 / 2016-10-06">
+<meta property="og:description" content="3.3.0 / 2016-10-06">
 <link rel="canonical" href="https://jekyllrb.com/docs/history/">
 <meta property="og:url" content="https://jekyllrb.com/docs/history/">
 <meta property="og:site_name" content="Jekyll • Simple, blog-aware, static sites">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2016-09-13T13:29:12-07:00">
+<meta property="article:published_time" content="2016-10-06T11:13:46-07:00">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@jekyllrb">
 <meta name="google-site-verification" content="onQcXpAvtHBrUI5LlroHNE_FP0b2qvFyPq7VZw36iEY">
@@ -28,9 +28,9 @@
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "headline": "History",
-    "datePublished": "2016-09-13T13:29:12-07:00",
-    "description": "3.2.1 / 2016-08-02",
-    "logo": "https://jekyllrb.comimg/logo-2x.png",
+    "datePublished": "2016-10-06T11:13:46-07:00",
+    "description": "3.3.0 / 2016-10-06",
+    "logo": "https://jekyllrb.com/img/logo-2x.png",
     "url": "https://jekyllrb.com/docs/history/"
   }
 </script>
@@ -282,7 +282,118 @@
             <a href="https://github.com/jekyll/jekyll/edit/master/site/_docs/history.md"><i class="fa fa-pencil"></i>  Improve this page</a>
           </div>
           <h1>History</h1>
-          <h2 id="v3-2-1">3.2.1 / 2016-08-02</h2>
+          <h2 id="v3-3-0">3.3.0 / 2016-10-06</h2>
+
+<h3 id="minor-enhancements-v3-3-0">Minor Enhancements</h3>
+
+<ul>
+  <li>Colorize interpolated output in logger.info (<a href="https://github.com/jekyll/jekyll/issues/5239">#5239</a>)</li>
+  <li>Site template: exclude Gemfile and Gemfile.lock in site config (<a href="https://github.com/jekyll/jekyll/issues/5293">#5293</a>)</li>
+  <li>Fix <a href="https://github.com/jekyll/jekyll/issues/5233">#5233</a>: Increase our ability to detect Windows. (<a href="https://github.com/jekyll/jekyll/issues/5235">#5235</a>)</li>
+  <li>update gitignore template to ignore theme gems built by user (<a href="https://github.com/jekyll/jekyll/issues/5326">#5326</a>)</li>
+  <li>Adds ability to link to all files (<a href="https://github.com/jekyll/jekyll/issues/5199">#5199</a>)</li>
+  <li>Exclude vendor by default (<a href="https://github.com/jekyll/jekyll/issues/5361">#5361</a>)</li>
+  <li>Add ThemeAssetsReader which reads assets from a theme (<a href="https://github.com/jekyll/jekyll/issues/5364">#5364</a>)</li>
+  <li>Add bundle install to jekyll new command (<a href="https://github.com/jekyll/jekyll/issues/5237">#5237</a>)</li>
+  <li>Add absolute_url and relative_url filters. (<a href="https://github.com/jekyll/jekyll/issues/5399">#5399</a>)</li>
+  <li>Site template: remove <code class="highlighter-rouge">css/</code> from new site scaffolding (<a href="https://github.com/jekyll/jekyll/issues/5402">#5402</a>)</li>
+  <li>Site template: Move contents of the index.html page to the ‘home’ layout (<a href="https://github.com/jekyll/jekyll/issues/5420">#5420</a>)</li>
+  <li>Exclude node_modules by default (<a href="https://github.com/jekyll/jekyll/issues/5210">#5210</a>)</li>
+  <li>Run hooks in priority order. (<a href="https://github.com/jekyll/jekyll/issues/5157">#5157</a>)</li>
+  <li>Add <code class="highlighter-rouge">static_file.name</code> and <code class="highlighter-rouge">.basename</code> Liquid attributes (<a href="https://github.com/jekyll/jekyll/issues/5264">#5264</a>)</li>
+  <li>set site.url in dev environment to <code class="highlighter-rouge">http://localhost:4000</code> (<a href="https://github.com/jekyll/jekyll/issues/5431">#5431</a>)</li>
+  <li>Add support for indented link references on excerpt (<a href="https://github.com/jekyll/jekyll/issues/5212">#5212</a>)</li>
+</ul>
+
+<h3 id="bug-fixes-v3-3-0">Bug Fixes</h3>
+
+<ul>
+  <li>Use jekyll-feed to generate the default site’s RSS feed (<a href="https://github.com/jekyll/jekyll/issues/5196">#5196</a>)</li>
+  <li>Site#configure_theme: do not set theme unless it’s a string (<a href="https://github.com/jekyll/jekyll/issues/5189">#5189</a>)</li>
+  <li>Convertible: set self.output in #render_all_layouts and #do_layout (<a href="https://github.com/jekyll/jekyll/issues/5337">#5337</a>)</li>
+  <li>Only complain about <code class="highlighter-rouge">kramdown.coderay</code> if it is actually in the config (<a href="https://github.com/jekyll/jekyll/issues/5380">#5380</a>)</li>
+  <li>Clarify documentation in theme gem’s README template (<a href="https://github.com/jekyll/jekyll/issues/5376">#5376</a>)</li>
+  <li>Allow underscore in highlighter language (<a href="https://github.com/jekyll/jekyll/issues/5375">#5375</a>)</li>
+  <li>Site template: set empty url in config file by default (<a href="https://github.com/jekyll/jekyll/issues/5338">#5338</a>)</li>
+  <li>Site template config: prepend ‘jekyll serve’ with ‘bundle exec’ (<a href="https://github.com/jekyll/jekyll/issues/5430">#5430</a>)</li>
+  <li>Don’t call <code class="highlighter-rouge">File.utime</code> for StaticFiles if it’s a symlink (<a href="https://github.com/jekyll/jekyll/issues/5427">#5427</a>)</li>
+  <li>Fix handling of non-ASCII characters in new <code class="highlighter-rouge">*_url</code> filters (<a href="https://github.com/jekyll/jekyll/issues/5410">#5410</a>)</li>
+  <li>Remove autoload of Draft which no longer exists. (<a href="https://github.com/jekyll/jekyll/issues/5441">#5441</a>)</li>
+  <li>Fix issue where Windows drive name is stripped from Jekyll.sanitized_path incorrectly (<a href="https://github.com/jekyll/jekyll/issues/5256">#5256</a>)</li>
+  <li>Fix bug where <code class="highlighter-rouge">post_url</code> tag matched incorrect post with subdirectory (<a href="https://github.com/jekyll/jekyll/issues/4873">#4873</a>)</li>
+  <li>Fix loading data from subdir with a period in name (<a href="https://github.com/jekyll/jekyll/issues/5433">#5433</a>)</li>
+  <li>Revert Commands::Serve#server_address signature change. (<a href="https://github.com/jekyll/jekyll/issues/5456">#5456</a>)</li>
+</ul>
+
+<h3 id="site-enhancements-v3-3-0">Site Enhancements</h3>
+
+<ul>
+  <li>Document <code class="highlighter-rouge">to_integer</code> and <code class="highlighter-rouge">inspect</code> filters (<a href="https://github.com/jekyll/jekyll/issues/5185">#5185</a>)</li>
+  <li>Fix path in the prompt (<a href="https://github.com/jekyll/jekyll/issues/5194">#5194</a>)</li>
+  <li>need subcommand build (<a href="https://github.com/jekyll/jekyll/issues/5190">#5190</a>)</li>
+  <li>Add the Jekyll Cloudinary plugin (<a href="https://github.com/jekyll/jekyll/issues/5183">#5183</a>)</li>
+  <li>Documentation : <code class="highlighter-rouge">new-theme</code> command (<a href="https://github.com/jekyll/jekyll/issues/5205">#5205</a>)</li>
+  <li>Document <code class="highlighter-rouge">link</code> Liquid tag (<a href="https://github.com/jekyll/jekyll/issues/5182">#5182</a>)</li>
+  <li>Remove mention of page for link tag in release post (<a href="https://github.com/jekyll/jekyll/issues/5214">#5214</a>)</li>
+  <li>fixed typo (<a href="https://github.com/jekyll/jekyll/issues/5226">#5226</a>)</li>
+  <li>Add missing comma (<a href="https://github.com/jekyll/jekyll/issues/5222">#5222</a>)</li>
+  <li>Maintain aspect ratio with <code class="highlighter-rouge">height: auto;</code> (<a href="https://github.com/jekyll/jekyll/issues/5254">#5254</a>)</li>
+  <li>Fix a link in deployment-methods.md (<a href="https://github.com/jekyll/jekyll/issues/5244">#5244</a>)</li>
+  <li>Documentation: improve highlight in <code class="highlighter-rouge">Creating a theme</code> (<a href="https://github.com/jekyll/jekyll/issues/5249">#5249</a>)</li>
+  <li>Bundler isn’t installed by default (<a href="https://github.com/jekyll/jekyll/issues/5258">#5258</a>)</li>
+  <li>Update troubleshooting documentation to include fix for issue with vendored gems (<a href="https://github.com/jekyll/jekyll/issues/5271">#5271</a>)</li>
+  <li>Link <code class="highlighter-rouge">--lsi</code> option’s description to Wikipedia docs on LSI (<a href="https://github.com/jekyll/jekyll/issues/5274">#5274</a>)</li>
+  <li>Document <code class="highlighter-rouge">--profile</code> option on the configuration page (<a href="https://github.com/jekyll/jekyll/issues/5279">#5279</a>)</li>
+  <li>Update homepage to sync with merge of <a href="https://github.com/jekyll/jekyll/issues/5258">#5258</a> (<a href="https://github.com/jekyll/jekyll/issues/5287">#5287</a>)</li>
+  <li>Add post about Jekyll Admin initial release (<a href="https://github.com/jekyll/jekyll/issues/5291">#5291</a>)</li>
+  <li>Replace liquid highlight tag with backticks (<a href="https://github.com/jekyll/jekyll/issues/5262">#5262</a>)</li>
+  <li>Word update (<a href="https://github.com/jekyll/jekyll/issues/5294">#5294</a>)</li>
+  <li>Site documentation section links always point to https://jekyllrb.com (<a href="https://github.com/jekyll/jekyll/issues/5281">#5281</a>)</li>
+  <li>Missing <code class="highlighter-rouge">:site, :post_render</code> payload documentation on site (<a href="https://github.com/jekyll/jekyll/issues/5280">#5280</a>)</li>
+  <li>Site: exclude README.md and .gitignore (<a href="https://github.com/jekyll/jekyll/issues/5304">#5304</a>)</li>
+  <li>Add link to Staticman (<a href="https://github.com/jekyll/jekyll/issues/5224">#5224</a>)</li>
+  <li>Update url for OpenShift (<a href="https://github.com/jekyll/jekyll/issues/5320">#5320</a>)</li>
+  <li>[docs] add help for missing static_file e.g. on heroku (<a href="https://github.com/jekyll/jekyll/issues/5334">#5334</a>)</li>
+  <li>Add a line about updating theme-gems in the docs (<a href="https://github.com/jekyll/jekyll/issues/5318">#5318</a>)</li>
+  <li>Explain how to copy a theme’s files (<a href="https://github.com/jekyll/jekyll/issues/5335">#5335</a>)</li>
+  <li>[docs] .md as default extension in examples (<a href="https://github.com/jekyll/jekyll/issues/5316">#5316</a>)</li>
+  <li>Fix small typo in docs (<a href="https://github.com/jekyll/jekyll/issues/5347">#5347</a>)</li>
+  <li>Add missing period to sentence in first paragraph. (<a href="https://github.com/jekyll/jekyll/issues/5372">#5372</a>)</li>
+  <li>added jekyll-spotify plugin (<a href="https://github.com/jekyll/jekyll/issues/5369">#5369</a>)</li>
+  <li>Add jekyll-menus to the list of plugins. (<a href="https://github.com/jekyll/jekyll/issues/5397">#5397</a>)</li>
+  <li>macOS and one grammar fix (<a href="https://github.com/jekyll/jekyll/issues/5403">#5403</a>)</li>
+  <li>Add documentation for <code class="highlighter-rouge">relative_url</code> and <code class="highlighter-rouge">absolute_url</code> (<a href="https://github.com/jekyll/jekyll/issues/5405">#5405</a>)</li>
+  <li>Bugfix on logo in JSON-LD (<a href="https://github.com/jekyll/jekyll/issues/5421">#5421</a>)</li>
+  <li>Fix Travis.ci documentation (<a href="https://github.com/jekyll/jekyll/issues/5413">#5413</a>)</li>
+  <li>[docs] Update documentation regarding <code class="highlighter-rouge">bundle install</code> after <code class="highlighter-rouge">jekyll new</code> (<a href="https://github.com/jekyll/jekyll/issues/5428">#5428</a>)</li>
+  <li>Replace classic box-sizing reset with inheritance reset (<a href="https://github.com/jekyll/jekyll/issues/5411">#5411</a>)</li>
+  <li>Update Wikipedia YAML list link (<a href="https://github.com/jekyll/jekyll/issues/5452">#5452</a>)</li>
+  <li>Add Jekyll 3.3 release post (<a href="https://github.com/jekyll/jekyll/issues/5442">#5442</a>)</li>
+</ul>
+
+<h3 id="development-fixes-v3-3-0">Development Fixes</h3>
+
+<ul>
+  <li>Update appveyor.yml and fix optional deps for Ruby x64 (<a href="https://github.com/jekyll/jekyll/issues/5180">#5180</a>)</li>
+  <li>Improve tests for Jekyll::PluginManager (<a href="https://github.com/jekyll/jekyll/issues/5167">#5167</a>)</li>
+  <li>Update Ruby versions in travis.yml (<a href="https://github.com/jekyll/jekyll/issues/5221">#5221</a>)</li>
+  <li>Avoid installing unecessary gems for site testing (<a href="https://github.com/jekyll/jekyll/issues/5272">#5272</a>)</li>
+  <li>Proposal: Affinity teams and their captains (<a href="https://github.com/jekyll/jekyll/issues/5273">#5273</a>)</li>
+  <li>Replace duplicate with postive local test in issue template (<a href="https://github.com/jekyll/jekyll/issues/5286">#5286</a>)</li>
+  <li>Update AppVeyor config. (<a href="https://github.com/jekyll/jekyll/issues/5240">#5240</a>)</li>
+  <li>Execute jekyll from clone instead of defined binary when running ‘script/default-site’ (<a href="https://github.com/jekyll/jekyll/issues/5295">#5295</a>)</li>
+  <li>rubocop: lib/jekyll/document.rb complexity fixes (<a href="https://github.com/jekyll/jekyll/issues/5045">#5045</a>)</li>
+  <li>Proxy a number of Convertible methods to Renderer (<a href="https://github.com/jekyll/jekyll/issues/5308">#5308</a>)</li>
+  <li>Run executable for Cucumber via Ruby instead of Shell (<a href="https://github.com/jekyll/jekyll/issues/5383">#5383</a>)</li>
+  <li>Appease Rubocop (<a href="https://github.com/jekyll/jekyll/issues/5381">#5381</a>)</li>
+  <li>remove features’ directories on windows with proper access (<a href="https://github.com/jekyll/jekyll/issues/5389">#5389</a>)</li>
+  <li>
+<code class="highlighter-rouge">site_configuration.feature</code>: use UTC format in timezone (<a href="https://github.com/jekyll/jekyll/issues/5416">#5416</a>)</li>
+  <li>swallow bundle output from <code class="highlighter-rouge">jekyll new</code> while in CI (<a href="https://github.com/jekyll/jekyll/issues/5408">#5408</a>)</li>
+  <li>Add .editorconfig (<a href="https://github.com/jekyll/jekyll/issues/5412">#5412</a>)</li>
+</ul>
+
+<h2 id="v3-2-1">3.2.1 / 2016-08-02</h2>
 
 <h3 id="bug-fixes-v3-2-1">Bug Fixes</h3>
 
