@@ -19,7 +19,7 @@
 <meta property="og:url" content="https://jekyllrb.com/docs/installation/">
 <meta property="og:site_name" content="Jekyll • Simple, blog-aware, static sites">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2016-10-06T11:13:46-07:00">
+<meta property="article:published_time" content="2016-10-19T10:50:50-07:00">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@jekyllrb">
 <meta name="google-site-verification" content="onQcXpAvtHBrUI5LlroHNE_FP0b2qvFyPq7VZw36iEY">
@@ -28,7 +28,7 @@
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "headline": "Installation",
-    "datePublished": "2016-10-06T11:13:46-07:00",
+    "datePublished": "2016-10-19T10:50:50-07:00",
     "description": "Getting Jekyll installed and ready-to-go should only take a few minutes.If it ever becomes a pain, please file an issue(or submit a pull request) describing the issue youencountered and how we might make the process easier.",
     "logo": "https://jekyllrb.com/img/logo-2x.png",
     "url": "https://jekyllrb.com/docs/installation/"
@@ -390,7 +390,31 @@ Check out <a href="../extras/">the extras page</a> for more information.</p>
   </p>
 </div>
 
-<p>Now that you’ve got everything installed, let’s get to work!</p>
+<h2 id="already-have-jekyll">Already Have Jekyll?</h2>
+
+<p>Before you start developing with Jekyll, you may want to check that you’re up to date with the latest version. To find your version of Jekyll, run one of these commands:</p>
+
+<div class="language-sh highlighter-rouge">
+<pre class="highlight"><code><span class="gp">$ </span>jekyll --version
+<span class="gp">$ </span>gem list jekyll
+</code></pre>
+</div>
+
+<p>You can also use <a href="https://rubygems.org/gems/jekyll">RubyGems</a> to find the current versioning of any gem. But you can also use the <code class="highlighter-rouge">gem</code> command line tool:</p>
+
+<div class="language-sh highlighter-rouge">
+<pre class="highlight"><code><span class="gp">$ </span>gem search jekyll --remote
+</code></pre>
+</div>
+
+<p>and you’ll search for just the name <code class="highlighter-rouge">jekyll</code>, and in brackets will be latest version. Another way to check if you have the latest version is to run the command <code class="highlighter-rouge">gem outdated</code>. This will provide a list of all the gems on your system that need to be updated. If you aren’t running the latest version, run this command:</p>
+
+<div class="language-sh highlighter-rouge">
+<pre class="highlight"><code><span class="gp">$ </span>gem update jekyll
+</code></pre>
+</div>
+
+<p>Now that you’ve got everything up-to-date and installed, let’s get to work!</p>
 
           
 
