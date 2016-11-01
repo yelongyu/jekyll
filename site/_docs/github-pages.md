@@ -52,7 +52,7 @@ few minor details.
     your site to GitHub Pages, you will not be caught by unexpected
     differences between various versions of the gems. To use the
     currently-deployed version of the gem in your project, add the
-    following to your <code>Gemfile</code>:
+    following to your <code>Gemfile</code>:  
 
 ```ruby
 source 'https://rubygems.org'
@@ -67,7 +67,7 @@ gem 'github-pages', versions['github-pages']
     This will ensure that when you run <code>bundle install</code>, you
     have the correct version of the <code>github-pages</code> gem.
 
-    If that fails, simplify it:
+    If that fails, simplify it:  
 
 ```ruby
 source 'https://rubygems.org'
